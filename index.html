@@ -13,44 +13,48 @@
     <h1 class="titulo">MOKEPON 🔥 💧 🌱</h1>
     <section id="seleccionar_mascota">
         <h2>Elije tu mascota:</h2>
+                
                 <div>
-                    <label class="tarjeta" for="hipodoge">Hipodoge🐘</label>
+                    
+                    <label class="tarjeta" for="hipodoge"><img class="img-mascota" src="./assets/mokepons_mokepon_hipodoge_attack.png" alt=""> Hipodoge🐘</label>
                     <input type="radio" name="mascota" id="hipodoge">
                 </div>
                 
                 <div>
-                    <label class="tarjeta" for="capipepo">Capipepo🦔</label>
+                    <label class="tarjeta" for="capipepo"><img class="img-mascota" src="./assets/mokepons_mokepon_capipepo_attack.png" alt=""> Capipepo🦔</label>
                     <input type="radio" name="mascota" id="capipepo">
                 </div>
                 
                 <div>
-                    <label class="tarjeta" for="ratigueya">Ratigueya🦝</label>
+                    <label class="tarjeta" for="ratigueya"> <img class="img-mascota" src="./assets/mokepons_mokepon_ratigueya_attack.webp" alt=""> Ratigueya🦝</label>
                     <input type="radio" name="mascota" id="ratigueya">
                 </div>
                 
         <button class="btn-select" id="btn-select">Seleccionar</button>
 
     </section>
+    <span class="elije_ataque">
+        <section id="seleccionar_ataque">
+            <div>
+                <p><span id="name-player"></span> <span id="lives-player" >❤️❤️❤️</span> </p>
+                <p><span id="name-enemy"></span> <span id="lives-enemy" >❤️❤️❤️</span> </p>
+            </div>
 
-    <section id="seleccionar_ataque">
-        <h2>Elije tu ataque:</h2>
-
-        <p><span id="name-player"></span> <span id="lives-player" >❤️❤️❤️</span> </p>
-        <p><span id="name-enemy"></span> <span id="lives-enemy" >❤️❤️❤️</span> </p>
-        <p>
-            <button class="btn-select" id="btn-fuego">Fuego🔥</button>
-            <button class="btn-select" id="btn-agua">Agua💧</button>
-            <button class="btn-select" id="btn-tierra">Tierra🌱</button>
-        </p>
-    </section>
-
-    <section id="mensajes">
+            <div class="btn-box">
+                <h2 class="titulo-btn-ataque">Elije tu ataque:</h2>
+                <button class="btn-select" id="btn-fuego">Fuego🔥</button>
+                <button class="btn-select" id="btn-agua">Agua💧</button>
+                <button class="btn-select" id="btn-tierra">Tierra🌱</button>
+                <section id="reiniciar">
+                    <button class="btn-select" id="btn-reset">Reiniciar 🔄</button>
+                </section>
+            </div>
+        </section>
     
-    </section>
-
-    <section id="reiniciar">
-        <button class="btn-select" id="btn-reset">Reiniciar 🔄</button>
-    </section>
-
+        <section id="mensajes">
+        </section>
+        
+    </span>
+    
 </body>
 </html>

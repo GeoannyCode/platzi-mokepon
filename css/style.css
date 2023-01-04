@@ -5,6 +5,7 @@
     --neo-color-one: #23a094;
     --neo-color-two: #e2442f;
     --neo-color-tree: #90a8ed;
+    --shadow: 5px 5px 0px -1px rgba(0,0,0,1); -webkit-box-shadow: 5px 5px 0px -1px rgba(0,0,0,1); -moz-box-shadow: 5px 5px 0px -1px rgba(0,0,0,1);;
 }
 
 body{
@@ -13,8 +14,7 @@ body{
     min-block-size: 100vh;
     padding: 0;
     margin: 0;
-    font-family: 'Oswald', sans-serif;
-    height: 100vh;
+    font-family: 'Oswald', sans-serif;  
     flex-direction: column;
     align-items: center;
     box-sizing: border-box
@@ -22,7 +22,7 @@ body{
 
 .titulo{
     font-weight: 600;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 #seleccionar_mascota{
@@ -30,30 +30,36 @@ body{
     flex-direction: column;
 }
 
+.img-mascota{
+    width: 70px;
+}
+
+#seleccionar_mascota > div{
+    display: flex;
+}
 
 .tarjeta{
     font-size: 20px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     margin: 10px;
-    padding: 20px;
+    padding: 10px;
     border: 2px solid black;
     margin-top: 10px;
     transition: box-shadow .3s ease;
 }
 
 .tarjeta:hover{
-    box-shadow: 5px 5px 0px -1px rgba(0,0,0,1);
-    -webkit-box-shadow: 5px 5px 0px -1px rgba(0,0,0,1);
-    -moz-box-shadow: 5px 5px 0px -1px rgba(0,0,0,1);
+    box-shadow: var(--shadow);
     cursor: pointer;
 }
 
 #seleccionar_mascota > div:nth-child(2) > label:nth-child(1){
-    background-color: var(--neo-color-one);
+    background-color: var(--neo-color-tree);
 }
 
 #seleccionar_mascota > div:nth-child(3) > label:nth-child(1){
-    background-color: var(--neo-color-tree);
+    background-color: var(--neo-color-one);
 }
 
 #seleccionar_mascota > div:nth-child(4) > label:nth-child(1){
@@ -66,18 +72,51 @@ body{
     font-family: 'Oswald', sans-serif;
     background-color: whitesmoke;
     border: 2px solid black;
-    margin: 20px;
+    margin-top: 20px;
     border-radius: 50em;
     padding: 10px;
 
     transition: box-shadow 0.3s ease;
-    transition: margin-top 0.3s ease;
 }
 
 .btn-select:hover{
     cursor: pointer;
-    box-shadow: 5px 5px 0px -1px rgba(0,0,0,1);
--webkit-box-shadow: 5px 5px 0px -1px rgba(0,0,0,1);
--moz-box-shadow: 5px 5px 0px -1px rgba(0,0,0,1);
-    margin-top: 10px;
+    box-shadow: var(--shadow)
+}
+
+.elije_ataque{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    font-size: 20px;
+}
+
+#seleccionar_ataque{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#seleccionar_ataque .btn-box{
+    display: flex;
+    flex-direction: column; 
+}
+
+.btn-box .titulo-btn-ataque{
+    margin: 0;
+}
+
+
+#mensajes{
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    font-size: 16px;
+    padding: 30px;
+    margin: 0 50px 0 0;
+    background-color: #ff90e8;
+    border: 2px solid black;
+    box-shadow: var(--shadow);
+    height: 65vh;
+    overflow-y: scroll;
 }

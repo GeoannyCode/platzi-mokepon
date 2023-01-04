@@ -62,7 +62,7 @@ function selectJugador(){
     }else if(document.getElementById("ratigueya").checked){
         numSelect = 3
     }else{
-        alert("Debes selecionar una mascota");
+        alert("Debes seleccionar una mascota");
     }
 
     let spanNameAnimal = document.getElementById("name-player");
@@ -103,7 +103,10 @@ function selectEnemy(){
     spanNameAnimalEnemy.innerHTML = `Enemigo: ${nameAnimalSelectedEnemy}`
 
     let sectionSeleccionarAtaque = document.getElementById("seleccionar_ataque");
-    sectionSeleccionarAtaque.style.display = 'block';
+    let boxInfoPelea = document.getElementById("mensajes");
+    sectionSeleccionarAtaque.style.display = 'flex';
+    boxInfoPelea.style.display = 'flex'
+
 }
 
 //ataque del enemigo
@@ -173,7 +176,7 @@ function disabledAttack(){
 function mensaje(){
     let newP = document.createElement("p");
     let secctionMessage = document.getElementById('mensajes');
-    newP.innerHTML = `PJ ${emojiAnimalSelected}: ${attackPlayer} - PC ${emojiAnimalSelectedEnemy}: ${attackEnemy} ➡ ${combatStatus}`;
+    newP.innerHTML = `Jugador ${emojiAnimalSelected}: ${attackPlayer} - Enemigo ${emojiAnimalSelectedEnemy}: ${attackEnemy} ➡ ${combatStatus}`;
     secctionMessage.appendChild(newP);
 }
 
