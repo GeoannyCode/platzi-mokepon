@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap');
+
+:root{
+    --main-color: #feed01;
+    --neo-color-one: #23a094;
+    --neo-color-two: #e2442f;
+    --neo-color-tree: #90a8ed;
+}
+
+body{
+    display: flex;
+    background-color: var(--main-color);
+    min-block-size: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box
+}
+
+.titulo{
+    font-weight: 600;
+    font-size: 50px;
+}
+
+#seleccionar_mascota{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.tarjeta{
+    font-size: 20px;
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid black;
+    margin-top: 10px;
+    transition: box-shadow .3s ease;
+}
+
+.tarjeta:hover{
+    box-shadow: 5px 5px 0px -1px rgba(0,0,0,1);
+    -webkit-box-shadow: 5px 5px 0px -1px rgba(0,0,0,1);
+    -moz-box-shadow: 5px 5px 0px -1px rgba(0,0,0,1);
+    cursor: pointer;
+}
+
+#seleccionar_mascota > div:nth-child(2) > label:nth-child(1){
+    background-color: var(--neo-color-one);
+}
+
+#seleccionar_mascota > div:nth-child(3) > label:nth-child(1){
+    background-color: var(--neo-color-tree);
+}
+
+#seleccionar_mascota > div:nth-child(4) > label:nth-child(1){
+    background-color: var(--neo-color-two);
+}
+
+.btn-select{
+    width: 200px;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    margin: 20px;
+    border-radius: 50em;
+    padding: 10px;
+
+    transition: box-shadow 0.3s ease;
+    transition: margin-top 0.3s ease;
+}
+
+.btn-select:hover{
+    cursor: pointer;
+    box-shadow: 5px 5px 0px -1px rgba(0,0,0,1);
+-webkit-box-shadow: 5px 5px 0px -1px rgba(0,0,0,1);
+-moz-box-shadow: 5px 5px 0px -1px rgba(0,0,0,1);
+    margin-top: 10px;
+}
